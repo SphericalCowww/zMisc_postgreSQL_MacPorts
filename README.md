@@ -6,9 +6,11 @@ Mostly a record for how to set it up:
     sudo su - postgres
     cd /opt/local/var/db/postgresql11/
     ./pg_start
+    
     (window2)
     psql -U username -d dbname < aligulac.sql (from http://aligulac.com/about/db/)
     python3 readPostGreSQL.py
+    
     (window1)
     ./pg_stop
     exit
@@ -44,11 +46,14 @@ Mostly a record for how to set it up:
     ./pg_start
     /opt/local/lib/postgresql11/bin/createuser username
     /opt/local/lib/postgresql11/bin/psql
-      ALTER USER username with SUPERUSER;
+      ALTER USER username WITH SUPERUSER;
       CREATE DATABASE dbname;
       \q
     ./pg_stop
     exit
 
-###References
-    Mos
+### References
+Mostly from <a href="https://bsnyderblog.blogspot.com/2011/09/installing-postgresql-90-on-mac-os-x.html">BruceBlog</a>.
+Others: <a href="https://riptutorial.com/postgresql/example/6826/how-to-install-postgresql-via-macports-on-osx">riptutorial</a>,
+<a href="https://riptutorial.com/postgresql/example/6826/how-to-install-postgresql-via-macports-on-osx">stackoverflow.</a>
+
